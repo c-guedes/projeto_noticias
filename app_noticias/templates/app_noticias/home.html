@@ -2,9 +2,10 @@
 {% for noticia in object_list %}
     {% if noticia.publicado == True%}
     <div>
-        <h2>{{ noticia.titulo }}</h2>
-        <p>{{ noticia.conteudo | linebreaksbr}}</p>
-        <br>
+        <a href ="/detalhe/{{noticia.pk}}">{{ noticia.titulo }}</a>
+        <!--<p>{{ noticia.conteudo | linebreaksbr}}</p>
+        <p>Tags: {{ noticia.tags.all|join:", "}}</p>
+        <br>-->
     </div>
     {% endif %}
 {% endfor %}

@@ -41,4 +41,4 @@ class Noticia(models.Model):
     data_publicacao = models.DateTimeField(blank=True, null = True)
     publicado = models.BooleanField(blank=True, null = True )
     autor = models.ForeignKey(Pessoa, on_delete=models.CASCADE, blank=True, null = True)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag,related_name='tagsNoticia')

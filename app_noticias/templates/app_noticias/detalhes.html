@@ -1,0 +1,21 @@
+<html lang="pt-br">
+<head>
+<meta charset="UTF -8">
+<title>{{ noticia.titulo }}</title>
+</head>
+<body>
+<h1>{{ noticia.titulo }}</h1>
+<p>Por <strong>{{ noticia.autor }}</strong> em {{ noticia.data_publicacao }}</p>
+<p>Tags:
+{% for tag in noticia.tags.all %}
+<a href=noticia_tags/{{tag}}>{{ tag }}</a>
+{% if forloop.last %}, 
+{% endif %}
+{% endfor %}
+</p>
+<div>
+{{ noticia.conteudo | linebreaks }}
+</div>
+
+</body>
+</html>

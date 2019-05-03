@@ -1,0 +1,8 @@
+{% for noticia in noticia_tag %}
+    <div>
+        <a href ="/detalhe/{{noticia.pk}}">{{ noticia.titulo }}</a>
+        <br>{{ noticia.titulo }}</a>
+        <p>{{ noticia.conteudo | linebreaksbr}}</p>
+        <p>{{noticia.data_publicacao}}</p>
+    </div>
+{% endfor %}
